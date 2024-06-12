@@ -2,10 +2,6 @@ package com.singlestore.hasura.cli
 
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-import io.hasura.ndc.common.ColumnSchemaRow
-import io.hasura.ndc.common.ConnectorConfiguration
-import io.hasura.ndc.common.TableSchemaRow
-import io.hasura.ndc.common.TableType
 import java.sql.DriverManager
 
 object SingleStoreConfigGenerator {
@@ -46,8 +42,7 @@ object SingleStoreConfigGenerator {
                         'type', columns.data_type,
                         'numeric_scale', columns.numeric_scale,
                         'nullable', if (columns.is_nullable = 'yes', true, false),
-                        'auto_increment', if(columns.extra = 'auto_increment', true, false),
-                        'is_primarykey', if(columns.COLUMN_KEY = 'PRI', true, false)
+                        'auto_increment', if(columns.extra = 'auto_increment', true, false)
                     )) as COLUMNS
                 FROM INFORMATION_SCHEMA.COLUMNS columns
                 GROUP BY columns.TABLE_SCHEMA, columns.TABLE_NAME
@@ -78,8 +73,7 @@ object SingleStoreConfigGenerator {
                             },
                             description = res.getString("DESCRIPTION"),
                             columns = res.getString("COLUMNS").let { mapper.readValue<List<ColumnSchemaRow>>(it) },
-                            pks = res.getString("PKS").let { mapper.readValue<List<String>?>(it) },
-                            fks = null
+                            pks = res.getString("PKS").let { mapper.readValue<List<String>?>(it) }
                         ))
                     }
                 }
@@ -88,9 +82,7 @@ object SingleStoreConfigGenerator {
 
         return ConnectorConfiguration(
             jdbcUrl = jdbcUrl,
-            jdbcProperties = emptyMap(),
-            tables = tables,
-            functions = emptyList()
+            tables = tables
         )
     }
 }

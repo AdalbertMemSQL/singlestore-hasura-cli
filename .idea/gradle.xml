@@ -9,7 +9,6 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/ndc-cli-singlestore" />
-            <option value="$PROJECT_DIR$/ndc-ir" />
           </set>
         </option>
       </GradleProjectSettings>

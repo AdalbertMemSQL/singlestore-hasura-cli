@@ -13,8 +13,6 @@ repositories {
 }
 
 dependencies {
-    implementation(project(":ndc-ir"))
-
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.15.2")
     implementation("info.picocli:picocli:4.7.5")
     implementation("com.singlestore:singlestore-jdbc-client:1.2.3")

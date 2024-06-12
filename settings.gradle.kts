@@ -7,5 +7,4 @@ pluginManagement {
 
 rootProject.name = "singlestore-hasura-connector"
 
-include(":ndc-ir")
 include(":ndc-cli-singlestore")

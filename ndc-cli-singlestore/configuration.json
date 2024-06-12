@@ -1,0 +1,582 @@
+{
+  "jdbcUrl" : "jdbc:singlestore://localhost:3306?user=root&password=password",
+  "tables" : [ {
+    "tableName" : "`Chinook`.`Album`",
+    "tableType" : "TABLE",
+    "description" : "",
+    "columns" : [ {
+      "name" : "AlbumId",
+      "description" : "",
+      "type" : "bigint",
+      "numeric_scale" : 0,
+      "nullable" : false,
+      "auto_increment" : true,
+      "is_primarykey" : null
+    }, {
+      "name" : "Title",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : false,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "ArtistId",
+      "description" : "",
+      "type" : "int",
+      "numeric_scale" : 0,
+      "nullable" : false,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    } ],
+    "pks" : [ "AlbumId" ]
+  }, {
+    "tableName" : "`Chinook`.`Artist`",
+    "tableType" : "TABLE",
+    "description" : "",
+    "columns" : [ {
+      "name" : "ArtistId",
+      "description" : "",
+      "type" : "bigint",
+      "numeric_scale" : 0,
+      "nullable" : false,
+      "auto_increment" : true,
+      "is_primarykey" : null
+    }, {
+      "name" : "Name",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    } ],
+    "pks" : [ "ArtistId" ]
+  }, {
+    "tableName" : "`Chinook`.`Customer`",
+    "tableType" : "TABLE",
+    "description" : "",
+    "columns" : [ {
+      "name" : "CustomerId",
+      "description" : "",
+      "type" : "bigint",
+      "numeric_scale" : 0,
+      "nullable" : false,
+      "auto_increment" : true,
+      "is_primarykey" : null
+    }, {
+      "name" : "FirstName",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : false,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "LastName",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : false,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "Company",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "Address",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "City",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "State",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "Country",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "PostalCode",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "Phone",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "Fax",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "Email",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : false,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "SupportRepId",
+      "description" : "",
+      "type" : "int",
+      "numeric_scale" : 0,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    } ],
+    "pks" : [ "CustomerId" ]
+  }, {
+    "tableName" : "`Chinook`.`Employee`",
+    "tableType" : "TABLE",
+    "description" : "",
+    "columns" : [ {
+      "name" : "EmployeeId",
+      "description" : "",
+      "type" : "bigint",
+      "numeric_scale" : 0,
+      "nullable" : false,
+      "auto_increment" : true,
+      "is_primarykey" : null
+    }, {
+      "name" : "LastName",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : false,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "FirstName",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : false,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "Title",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "ReportsTo",
+      "description" : "",
+      "type" : "int",
+      "numeric_scale" : 0,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "BirthDate",
+      "description" : "",
+      "type" : "datetime",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "HireDate",
+      "description" : "",
+      "type" : "datetime",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "Address",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "City",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "State",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "Country",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "PostalCode",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "Phone",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "Fax",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "Email",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    } ],
+    "pks" : [ "EmployeeId" ]
+  }, {
+    "tableName" : "`Chinook`.`Genre`",
+    "tableType" : "TABLE",
+    "description" : "",
+    "columns" : [ {
+      "name" : "GenreId",
+      "description" : "",
+      "type" : "bigint",
+      "numeric_scale" : 0,
+      "nullable" : false,
+      "auto_increment" : true,
+      "is_primarykey" : null
+    }, {
+      "name" : "Name",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    } ],
+    "pks" : [ "GenreId" ]
+  }, {
+    "tableName" : "`Chinook`.`Invoice`",
+    "tableType" : "TABLE",
+    "description" : "",
+    "columns" : [ {
+      "name" : "InvoiceId",
+      "description" : "",
+      "type" : "bigint",
+      "numeric_scale" : 0,
+      "nullable" : false,
+      "auto_increment" : true,
+      "is_primarykey" : null
+    }, {
+      "name" : "CustomerId",
+      "description" : "",
+      "type" : "int",
+      "numeric_scale" : 0,
+      "nullable" : false,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "InvoiceDate",
+      "description" : "",
+      "type" : "datetime",
+      "numeric_scale" : null,
+      "nullable" : false,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "BillingAddress",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "BillingCity",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "BillingState",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "BillingCountry",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "BillingPostalCode",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "Total",
+      "description" : "",
+      "type" : "decimal",
+      "numeric_scale" : 2,
+      "nullable" : false,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    } ],
+    "pks" : [ "InvoiceId" ]
+  }, {
+    "tableName" : "`Chinook`.`InvoiceLine`",
+    "tableType" : "TABLE",
+    "description" : "",
+    "columns" : [ {
+      "name" : "InvoiceLineId",
+      "description" : "",
+      "type" : "bigint",
+      "numeric_scale" : 0,
+      "nullable" : false,
+      "auto_increment" : true,
+      "is_primarykey" : null
+    }, {
+      "name" : "InvoiceId",
+      "description" : "",
+      "type" : "int",
+      "numeric_scale" : 0,
+      "nullable" : false,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "TrackId",
+      "description" : "",
+      "type" : "int",
+      "numeric_scale" : 0,
+      "nullable" : false,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "UnitPrice",
+      "description" : "",
+      "type" : "decimal",
+      "numeric_scale" : 2,
+      "nullable" : false,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "Quantity",
+      "description" : "",
+      "type" : "int",
+      "numeric_scale" : 0,
+      "nullable" : false,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    } ],
+    "pks" : [ "InvoiceLineId" ]
+  }, {
+    "tableName" : "`Chinook`.`MediaType`",
+    "tableType" : "TABLE",
+    "description" : "",
+    "columns" : [ {
+      "name" : "MediaTypeId",
+      "description" : "",
+      "type" : "bigint",
+      "numeric_scale" : 0,
+      "nullable" : false,
+      "auto_increment" : true,
+      "is_primarykey" : null
+    }, {
+      "name" : "Name",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    } ],
+    "pks" : [ "MediaTypeId" ]
+  }, {
+    "tableName" : "`Chinook`.`Playlist`",
+    "tableType" : "TABLE",
+    "description" : "",
+    "columns" : [ {
+      "name" : "PlaylistId",
+      "description" : "",
+      "type" : "bigint",
+      "numeric_scale" : 0,
+      "nullable" : false,
+      "auto_increment" : true,
+      "is_primarykey" : null
+    }, {
+      "name" : "Name",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    } ],
+    "pks" : [ "PlaylistId" ]
+  }, {
+    "tableName" : "`Chinook`.`PlaylistTrack`",
+    "tableType" : "TABLE",
+    "description" : "",
+    "columns" : [ {
+      "name" : "PlaylistId",
+      "description" : "",
+      "type" : "int",
+      "numeric_scale" : 0,
+      "nullable" : false,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "TrackId",
+      "description" : "",
+      "type" : "int",
+      "numeric_scale" : 0,
+      "nullable" : false,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    } ],
+    "pks" : [ "PlaylistId", "TrackId" ]
+  }, {
+    "tableName" : "`Chinook`.`Track`",
+    "tableType" : "TABLE",
+    "description" : "",
+    "columns" : [ {
+      "name" : "TrackId",
+      "description" : "",
+      "type" : "bigint",
+      "numeric_scale" : 0,
+      "nullable" : false,
+      "auto_increment" : true,
+      "is_primarykey" : null
+    }, {
+      "name" : "Name",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : false,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "AlbumId",
+      "description" : "",
+      "type" : "int",
+      "numeric_scale" : 0,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "MediaTypeId",
+      "description" : "",
+      "type" : "int",
+      "numeric_scale" : 0,
+      "nullable" : false,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "GenreId",
+      "description" : "",
+      "type" : "int",
+      "numeric_scale" : 0,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "Composer",
+      "description" : "",
+      "type" : "varchar",
+      "numeric_scale" : null,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "Milliseconds",
+      "description" : "",
+      "type" : "int",
+      "numeric_scale" : 0,
+      "nullable" : false,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "Bytes",
+      "description" : "",
+      "type" : "int",
+      "numeric_scale" : 0,
+      "nullable" : true,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    }, {
+      "name" : "UnitPrice",
+      "description" : "",
+      "type" : "decimal",
+      "numeric_scale" : 2,
+      "nullable" : false,
+      "auto_increment" : false,
+      "is_primarykey" : null
+    } ],
+    "pks" : [ "TrackId" ]
+  } ]
+}
